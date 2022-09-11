@@ -8,12 +8,12 @@ interface StockApi {
 
     @GET("query?function=LISTING_STATUS")
     suspend fun getListings(
-        @Query("apiKey") apiKey: String = API_KEY,
+        @Query("apikey") apiKey: String = API_KEY,
     ): ResponseBody
 
     companion object {
         const val API_KEY = "GCYU6LH6MTJZAOT9"
-        const val BASE_URL = "https://www.alphavantage.co/"
+        const val BASE_URL = "https://alphavantage.co"
     }
 
 }
