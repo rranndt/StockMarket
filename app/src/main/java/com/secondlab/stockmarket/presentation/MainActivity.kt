@@ -1,4 +1,4 @@
-package com.secondlab.stockmarket
+package com.secondlab.stockmarket.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,7 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import com.ramcosta.composedestinations.DestinationsNavHost
-import com.secondlab.stockmarket.presentation.company_listings.NavGraphs
+import com.secondlab.stockmarket.presentation.NavGraphs
 import com.secondlab.stockmarket.ui.theme.StockMarketTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,7 +18,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             StockMarketTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
