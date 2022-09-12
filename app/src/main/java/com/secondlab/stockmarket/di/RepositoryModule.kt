@@ -2,8 +2,10 @@ package com.secondlab.stockmarket.di
 
 import com.secondlab.stockmarket.data.csv.CSVParser
 import com.secondlab.stockmarket.data.csv.CompanyListingsParser
+import com.secondlab.stockmarket.data.csv.IntradayInfoParser
 import com.secondlab.stockmarket.data.repository.StockRepositoryImpl
 import com.secondlab.stockmarket.domain.model.CompanyListing
+import com.secondlab.stockmarket.domain.model.IntradayInfo
 import com.secondlab.stockmarket.domain.repository.StockRepository
 import dagger.Binds
 import dagger.Module
@@ -20,6 +22,12 @@ abstract class RepositoryModule {
     abstract fun bindCompanyListingParser(
         companyListingsParser: CompanyListingsParser,
     ): CSVParser<CompanyListing>
+
+    @Binds
+    @Singleton
+    abstract fun bindIntradayInfoParser(
+        IntradayInfoParser: IntradayInfoParser,
+    ): CSVParser<IntradayInfo>
 
     @Binds
     @Singleton
